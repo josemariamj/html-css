@@ -12,6 +12,24 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
         }
 
         td, th {
@@ -43,16 +61,17 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas</caption> <!--E COMO SE FOSSE UMA DESCRIÇAO DA TABELA-->
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>Populaçao</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">Populaçao</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Sao Paulo</td>
-                <td class="num">45 919 049</td>
+                <tr>Sao Paulo</tr>
+                <tr class="num">45 919 049</tr>
             </tr>
             <tr>
                 <td>Minas Gerais</td>
@@ -115,14 +134,14 @@
             </tr>
             <tr>
                 <td>Rio Grande do Norte</td>
-                <td>3 658 813</td>
+                <td class="num">3 658 813</td>
             </tr><tr>
                 <td>Piauí</td>
-                <td>3 302 406</td>
+                <td class="num">3 302 406</td>
             </tr>
             <tr>
                 <td>Alagoas</td>
-                <td>3 127 511</td>
+                <td class="num">3 127 511</td>
             </tr>
             <tr>
                 <td>Distrito Federal</td>
@@ -158,8 +177,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td>0000</td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num">0000</td>
             </tr>
         </tfoot>
     </table>
